@@ -18,14 +18,14 @@ const AWS = require('aws-sdk');
 const fs = require('fs');
 // Set up AWS credentials
 AWS.config.update({
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_ACCESSKEY,
-    region: process.env.AWS_REGION
+    accessKeyId:  AWS_ACCESS_KEY_ID,
+    secretAccessKey:  AWS_ACCESSKEY,
+    region:  AWS_REGION
 });
 
-AWS_BUCKET_NAME=process.env.AWS_BUCKET_NAME;
-EMAIL_USER=process.env.EMAIL_USER;
-EMAIL_PASS=process.env.EMAIL_PASS;
+AWS_BUCKET_NAME= AWS_BUCKET_NAME;
+EMAIL_USER= EMAIL_USER;
+EMAIL_PASS= EMAIL_PASS;
 
 const s3 = new AWS.S3();
 
