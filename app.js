@@ -21,7 +21,10 @@ mongoose.connect("mongodb+srv://niloy4physics:Ck8BaEIQCRzgHnZj@cluster0.m3eki.mo
 
 
 // Routes
+app.use('/', (req, res) => {
+  res.send('Server running');
+});
 app.use('/api/users', require('./routes/user'));
 
-const PORT = process.env.PORT || 259;
+const PORT = process.env.PORT || 3259;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
